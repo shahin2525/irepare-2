@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
       <header className="bg-red-500 h-16">
-        <nav className="bg-green-500 h-full flex justify-between items-center w-full max-w-[1220px] mx-auto px-5">
+        <nav className="bg-green-500 h-full flex justify-between items-center w-full max-w-[1230px] mx-auto px-[20px]">
           <span className="text-3xl">IRepare</span>
           <ul className="space-x-6">
             <NavLink to="/">Home</NavLink>
