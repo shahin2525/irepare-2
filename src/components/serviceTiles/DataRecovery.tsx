@@ -1,14 +1,14 @@
 import useScrollGrow from "@/hooks/useScrollGrow";
 import { motion } from "framer-motion";
-const ChipSetReplacement = () => {
+const DataRecovery = () => {
   const { style, componentRef } = useScrollGrow();
   return (
     <motion.div
       style={style}
       ref={componentRef}
-      className="bg-red-500 col-span-12 lg:col-span-5 h-[415px] rounded-md"
+      className="bg-red-500 col-span-12 lg:col-span-7 h-[415px] rounded-md"
     ></motion.div>
   );
 };
 
-export default ChipSetReplacement;
+export default DataRecovery;
