@@ -10,12 +10,13 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { Trash2 } from "lucide-react";
 import { FormEvent, useState } from "react";
 
 const ServicesList = () => {
+  const queryClient = useQueryClient();
   const [serviceName, setServiceName] = useState("");
   const {
     mutateAsync,
@@ -30,6 +31,9 @@ const ServicesList = () => {
           "Content-Type": "application/json",
         },
       });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["services"] });
     },
   });
   console.log({ postError, isSuccess });

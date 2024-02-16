@@ -14,6 +14,7 @@ export const useGetService = () => {
       }));
       return services;
     },
+    staleTime: 30000,
   });
   return serviceInfo;
 };
